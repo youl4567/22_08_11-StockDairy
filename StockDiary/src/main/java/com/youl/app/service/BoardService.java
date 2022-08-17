@@ -1,4 +1,4 @@
-package com.youl.service;
+package com.youl.app.service;
 
 import com.youl.app.persistence.BoardDao;
 

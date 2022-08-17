@@ -1,8 +1,8 @@
-package com.youl.controller;
+package com.youl.app.controller;
 
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class UserController {
+public class BoardController {
 
 }
