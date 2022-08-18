@@ -2,6 +2,7 @@ package com.youl.app.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,8 @@ import com.youl.app.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-// @RequestMapping(value = "/user")
+@Controller
+@RequestMapping(value = "/user")
 public class UserController {
 
 	private final UserService userService;
@@ -25,7 +27,7 @@ public class UserController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
-		return null;
+		return "user/login";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -90,7 +92,7 @@ public class UserController {
 		 * rendering 하라는 의미
 		 */
 
-		return null;
+		return "user/join";
 	}
 
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
