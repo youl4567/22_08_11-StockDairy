@@ -37,7 +37,7 @@
 
 	<!-- mybatis-scn -->
 	<mybatis-spring:scan
-		base-package="com.youl.app.psersistence" />
+		base-package="com.youl.app.persistence" />
 
 
 </beans>
