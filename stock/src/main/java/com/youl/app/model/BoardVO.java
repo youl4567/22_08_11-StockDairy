@@ -18,10 +18,10 @@ import lombok.ToString;
 public class BoardVO {
 
 	public int	  b_num;			// 게시글 번호
-	public String b_title;		// 제목
-	public String b_content;	// 내용
+	public String b_title;			// 제목
+	public String b_content;		// 내용
 	public int 	  b_hit;			// 조회수
-	public String b_writer;		// 작성자   
-	public Date   b_date;			// 작성일
-								// 작성시간
+	public String b_writer;			// 작성자   
+	public String b_date;			// 작성일
+	public String b_time;			// 작성시간
 }
