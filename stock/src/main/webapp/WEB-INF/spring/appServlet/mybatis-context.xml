@@ -14,7 +14,7 @@
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/mydb" />
+			value="jdbc:mysql://localhost:3306/bootdb" />
 		<property name="username" value="callor" />
 		<property name="password" value="!Korea8080" />
 

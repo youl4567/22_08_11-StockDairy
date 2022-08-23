@@ -82,4 +82,13 @@ public class UserServiceImplV1 implements UserService {
 		return 0;
 	}
 
+	@Override
+	public void create_user_table() {
+		userDao.create_user_table();
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
 }

@@ -5,15 +5,15 @@
 
 <mapper namespace="com.youl.app.persistence.UserDao">
 	<select id="selectAll" resultType="UserVO">
-		SELECT * FROM tbl_user
+		SELECT * FROM tbl_users
 	</select>
 	
 	<select id="findById" resultType="UserVO">
-		SELECT * FROM tbl_user WHERE username = #{username}
+		SELECT * FROM tbl_users WHERE username = #{username}
 	</select>
 	
 	<insert id="insert" parameterType="UserVO">
-		INSERT INTO tbl_user
+		INSERT INTO tbl_users
 			(
 				username, 
 				password, 
@@ -29,7 +29,7 @@
 			)
 	</insert>
 	<update id="update" parameterType="UserVO">
-		UPDATE tbl_user SET
+		UPDATE tbl_users SET
 				password = #{password}, 
 				email = #{email},
 				name = #{name},
@@ -37,8 +37,18 @@
 		WHERE username = #{username} 
 	</update>
 	<delete id="delete">
-		DELETE FROM tbl_user WHERE username = #{username}
+		DELETE FROM tbl_users WHERE username = #{username}
 	</delete>
+	
+	<select id="create_user_table">
+	 	CREATE TABLE IF NOT EXISTS tbl_users (	
+	 		username VARCHAR(125) PRIMARY KEY,
+	 		password VARCHAR(125) NOT NULL,
+	 		name VARCHAR(50),
+	 		email VARCHAR(125),
+	 		role VARCHAR(10)
+		)
+ 	</select>
 </mapper>
 
 
