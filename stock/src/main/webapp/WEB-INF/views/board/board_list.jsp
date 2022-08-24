@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set value="${pageContext.request.contextPath}" var="rootPath" />
 <!DOCTYPE html>
 <html>
 <head>
 <script>
 	const rootPath = "${rootPath}"
 </script>
-<script src="${rootPath}/static/js/board.js?ver=2022-06-10-002"></script>
+<script src="${rootPath}/static/js/write.js?ver=2022-08-24"></script>
 </head>
 
 <body>
@@ -56,13 +58,13 @@
 			</c:forEach>
 		</table>
 
-	
-			<c:if test="${ not empty USER}">
-				<div id="pagebutton">
-					<a href="${rootPath}/board/board_write"><button>작성하기</button></a>
-				</div>
 
-			</c:if>
+		<c:if test="${ not empty USER}">
+			<div id="pagebutton">
+				<a href="${rootPath}/board/board_write"><button>작성하기</button></a>
+			</div>
+
+		</c:if>
 	</section>
 
 

@@ -1,14 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-<c:set value="${pageContext.request.contextPath}" var="rootPath" />    
-   
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set value="${pageContext.request.contextPath}" var="rootPath" />
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+	const rootPath = "${rootPath}"
+</script>
+<script src="${rootPath}/static/js/write.js?ver=2022-08-24"></script>
+<head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="icon" href="${rootPath}/favicon.ico" type="image/x-icon" />
 <style>
 	header {
 		padding:2rem;
@@ -48,12 +51,12 @@
 	<nav class="main_nav">
 		<ul>
 			<li>Home</li>
-			<li>공지사항</li>
-			<li>자유게시판</li>
+			<li ><a href="${rootPath}/board/board_list">게시판</a></li>
+			<li ><a href="${rootPath}/user/login">마이페에지</a></li>
 
 			<c:choose>
 				<c:when test="${empty USER}">
-					<li ><a href="${rootPath}/user/login">로그인</a></li>
+					<li><a href="${rootPath}/user/login">로그인</a></li>
 					<li><a href="${rootPath}/user/join">회원가입</a></li>
 				</c:when>
 				<c:otherwise>

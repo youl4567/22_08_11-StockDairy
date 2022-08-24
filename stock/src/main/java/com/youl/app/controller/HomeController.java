@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class HomeController {
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = {"/",""}, method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		log.debug("반갑습니다 여기는 home 입니다");
 		return "home";

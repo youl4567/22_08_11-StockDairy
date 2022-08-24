@@ -2,10 +2,13 @@ package com.youl.app.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.youl.app.model.BoardVO;
 import com.youl.app.persistence.BoardDao;
 import com.youl.app.service.BoardService;
 
+@Service
 public class BoardServiceImplV1 implements BoardService{
 
 	private final BoardDao boardDao;
@@ -48,13 +51,13 @@ public class BoardServiceImplV1 implements BoardService{
 
 	@Override
 	public BoardVO findById(String id) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	@Override
 	public int insert(BoardVO vo) {
-		// TODO Auto-generated method stub
+		boardDao.insert(vo);
 		return 0;
 	}
 
