@@ -120,7 +120,10 @@ public class BoardController {
 	@RequestMapping(value = "{b_num}/board_detail", method = RequestMethod.GET)
 	public String board_detail(@PathVariable("b_num") int b_num, Model model, HttpSession session) {
 
+		UserVO loginuser = (UserVO)session.getAttribute("USER");
+		model.addAttribute("loginUser", loginuser);
 		BoardVO boardVO = boardService.findByNumber(b_num);
+		model.addAttribute("board", boardVO);
 		return "board/board_detail";
 
 	}

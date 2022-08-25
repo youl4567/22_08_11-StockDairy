@@ -8,7 +8,7 @@
 <script>
 	const rootPath = "${rootPath}"
 </script>
-<script src="${rootPath}/static/js/write.js?ver=2022-08-24"></script>
+<script src="${rootPath}/static/js/write.js?ver=220825-3"></script>
 </head>
 
 <body>
@@ -26,8 +26,9 @@
 
 		<table id="boardtable" class="board">
 			<colgroup>
+				<col width="10%" />
+				<col width="30%" />
 				<col width="15%" />
-				<col width="40%" />
 				<col width="15%" />
 				<col width="15%" />
 				<col width="15%" />
@@ -59,11 +60,13 @@
 		</table>
 
 
+				<a href="${rootPath}/"><button>홈으로</button></a>
 		<c:if test="${ not empty USER}">
 			<div id="pagebutton">
 				<a href="${rootPath}/board/board_write"><button>작성하기</button></a>
 			</div>
-
+			<div>
+			</div>	
 		</c:if>
 	</section>
 

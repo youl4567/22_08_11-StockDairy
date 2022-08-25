@@ -24,55 +24,29 @@
 
 			<!-- 제목 title  -->
 
-			<h3>${BOARD.b_title}</h3>
+			<h3>제목 : ${board.b_title}</h3>
 		</div>
 
 		<!-- 내용 content -->
 		<div id="content">
-			<p>${BOARD.b_content}</p>
+			<p>내용</p>
+			<p>${board.b_content}</p>
 		</div>
 				<div class="btn-box">
-					<a href="${rootPath}/board/board_list" class="list">리스트</a> 
-			<c:if test="${USER1 eq 'OK'}">
+				<c:choose>
+				<c:when test="${loginUser eq USER}">
 					<div class="update_btn">
-					<a href="${rootPath}/board/${BOARD.b_num}/board_update" class="update">수정</a>
+					<a href="${rootPath}/board/${board.b_num}/board_update" class="update">수정</a>
 					</div>
-					<!-- href="javascript:void(0) : a tag의 link 연결기능을 완전히 무력화 -->
-					<a href="${rootPath}/board/${BOARD.b_num}/board_delete" class="delete">삭제</a>
-			</c:if>
+					<a href="${rootPath}/board/${board.b_num}/board_delete" class="delete">삭제</a>
+				</c:when>
+				<c:otherwise>
+				</c:otherwise>
+			</c:choose>	
+	 				<a href="${rootPath}/board/board_list" class="list">리스트</a> 
+			
 				</div>
 
-
-		<!-- 댓글 부분 -->
-
-		<div id="comment">
-			<ul>
-				<li>
-					<div id="nick">
-						<img src="${rootPath}/static/image/02.png" />
-						<p>닉네임</p>
-					</div>
-					<p>카카오페이가</p>
-				</li>
-				<li>
-					<div id="nick">
-						<img src="${rootPath}/static/image/03.png" />
-						<p>닉네임</p>
-					</div>
-					<p>SK하이닉스</p>
-				</li>
-			</ul>
-		</div>
-
-		<div id="comment-sub">
-			<ul>
-				<li id="comment-nick">닉네임님</li>
-				<li><input type="text" placeholder="댓글을 남겨보세요!" /></li>
-				<li id="btnli">
-					<button type="button">댓글 등록</button>
-				</li>
-			</ul>
-		</div>
 	</section>
 
 </body>
