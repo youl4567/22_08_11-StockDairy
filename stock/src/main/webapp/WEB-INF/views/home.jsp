@@ -52,7 +52,7 @@
 		<ul>
 			<li>Home</li>
 			<li ><a href="${rootPath}/board/board_list">게시판</a></li>
-			<li ><a href="${rootPath}/user/login">마이페에지</a></li>
+			<li ><a href="${rootPath}/mypage/my_list">마이페이지</a></li>
 
 			<c:choose>
 				<c:when test="${empty USER}">

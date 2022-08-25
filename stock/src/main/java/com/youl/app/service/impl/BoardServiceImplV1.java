@@ -63,14 +63,16 @@ public class BoardServiceImplV1 implements BoardService{
 
 	@Override
 	public int update(BoardVO vo) {
-		// TODO Auto-generated method stub
+		boardDao.update(vo);
 		return 0;
 	}
 
 	@Override
-	public int delete(String id) {
-		// TODO Auto-generated method stub
+	public int delete(String b_num) {
+		boardDao.deleteByNum(b_num);
 		return 0;
 	}
+
+
 
 }

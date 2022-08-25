@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.youl.app.persistence.StockDao">
+
+	<select id="selectAll" resultType="StockVO">
+		SELECT * FROM tbl_Stock
+	</select>
+
+	<select id="findByNumber" resultType="StockVO">
+		SELECT * FROM tbl_Stock
+		WHERE s_num = #{s_num}
+	</select>
+
+	<insert id="insert" parameterType="StockVO">
+		INSERT INTO tbl_Stock
+		(
+			s_user,
+			s_num,
+			s_name,
+			s_buy,
+			s_amount,
+			s_buyDate,
+			s_total_buy,
+			s_sell,
+			s_sellDate,
+			s_total_sell,
+			s_rate,
+			s_benefit
+		)VALUES(
+			#{s_user},
+			#{s_num},
+			#{s_name},
+			#{s_buy},
+			#{s_amount},
+			#{s_buyDate},
+			#{s_total_buy},
+			#{s_sell},
+			#{s_sellDate},
+			#{s_total_sell},
+			#{s_rate},
+			#{s_benefit}
+
+		)
+	</insert>
+
+	<update id="update" parameterType="StockVO">
+		UPDATE tbl_Stock SET
+		s_user = #{s_user}
+		s_name = #{s_name},
+		s_buy = #{s_buy},
+		s_amount = #{s_amount},
+		s_buyDate = #{s_buyDate},
+		s_total_buy = #{s_total_buy},
+		s_sell = #{s_sell},
+		s_sellDate = #{s_sellDate},
+		s_total_sell = #{s_total_sell},
+		s_rate = #{s_rate},
+		s_benefit = #{s_benefit},
+		WHERE s_num =	#{s_num}
+	</update>
+
+	<delete id="deleteByNum">
+		DELETE FROM tbl_Stock WHERE s_num = #{s_num}
+	</delete>
+</mapper>
+
+
+
+
+

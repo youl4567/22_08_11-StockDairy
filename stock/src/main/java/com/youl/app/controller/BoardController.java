@@ -3,7 +3,6 @@ package com.youl.app.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import javax.servlet.http.HttpSession;
 
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.youl.app.model.BoardVO;
 import com.youl.app.model.UserVO;
 import com.youl.app.service.BoardService;
-import com.youl.app.service.impl.BoardServiceImplV1;
 
 import lombok.extern.slf4j.Slf4j;
 
