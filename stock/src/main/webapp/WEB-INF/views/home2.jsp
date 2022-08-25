@@ -19,6 +19,14 @@
 		<p>${USER.name} 님 반갑습니다</p>
 		<a href="${rootPath}/user/logout">로그 아웃 하기</a>
 	</c:if>
+	
+<!-- 	path[Attributes Style] {
+    fill: rgb(151, 177, 76);
+    d: path("M 110.982 0.00000178376 A 86 86 0 1 1 108.731 0.0299425 L 110.16 54.1911 A 31.82 31.82 0 1 0 110.994 54.18 Z");
+    transform: translate(0, 0);
+    opacity: 1;
+    stroke-linejoin: round;
+} -->
 </body>
 </html>
 
